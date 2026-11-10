@@ -1,0 +1,11 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // For now, deny all writes. Future uploads will be under /users/{uid}/...
+    match /{allPaths=**} {
+      allow read: if request.auth != null;
+      allow write: if false; // No public writes yet
+    }
+  }
+}
+

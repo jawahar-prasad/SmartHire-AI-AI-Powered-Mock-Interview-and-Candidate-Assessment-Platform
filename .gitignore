@@ -1,0 +1,9 @@
+node_modules/
+/build
+/dist
+/.firebase/
+/.agents/
+/.env
+/.env.local
+/.env.*.local
+serviceAccountKey.json
